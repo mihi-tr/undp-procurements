@@ -46,7 +46,7 @@ body {
 </div>
 <div id="control">
 </div>
-<p>The above diagram shows data from the <a href="http://procurement-notices.undp.org/view_awards.cfm">2013 awarded
+<p>The above diagram shows data from the <a href="http://procurement-notices.undp.org/view_awards.cfm">2012 awarded
 contracts of the UNDP</a>. On the left are countries of the UNDP offices,
 the right, the countries of the contractors. If the Liberian office,
 purchases from a contractor in Liberia, there will be a straight
@@ -61,7 +61,7 @@ sankey plugin</a></p>
 
 var margin = {top: 1, right: 1, bottom: 6, left: 1},
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 700 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"),
     format = function(d) { return formatNumber(d) + " US$"; },
@@ -81,7 +81,7 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-d3.csv("UNDP2013.csv", function(d) {
+d3.csv("UNDP2012.csv", function(d) {
   console.log(d) 
   
   sources=_.uniq(_.map(d, function(d) {
